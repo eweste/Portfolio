@@ -46,53 +46,48 @@
         </div> <!-- end .container-fluid -->
     </nav> <!-- end navigation bar -->  
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
                 <h2 class="portfolio-title">Automated Raster Analysis</h2>
                 <p class="portfolio-description">
                     This project was created for the Capstone course GEO 777 at UW-Madison. This map analyzes hypothetical data of nitrogen concentration levels and cancer rates.
+                    <br>The full report can be read <a href="assets/GEO777RasterProject.pdf">here.</a>
                 </p>
             </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
+            <h3>Background</h3>
             <div class="col-md-12 portfolio-image figure-img img-fluid">
-                <a href="assets/screen5.png">
-                    <img src="assets/screen5.png" alt="World View of the Style Map" class="center-block img-responsive" max-width="100%" areheight="auto" />
+                <a href="assets/cover1.png">
+                    <img src="assets/cover1.png" alt="Nitrate well point map" class="center-block img-responsive" max-width="100%" areheight="auto" />
                 </a>
             </div>
-            <div class="col-md-12 portfolio-image figure-img img-fluid">
-                <a href="assets/screen7.png">
-                    <img src="assets/screen7.png" alt="View of New York" class="center-block img-responsive" max-width="100%" areheight="auto" />
+            <p><br>This program was created by taking (hypothetical) randomly sampled nitrate concentrations in point layers and 
+            county level data on cancer rates in Wisconsin to find if there was statistical significance between the hypothesis that 
+            higher nitrate rates in water cause increases in cancer. The program was written in Python utilizing the arcpy functions of
+        ESRI ArcPRO. </p>
+        <h3>The Program</h3>
+        <p>Using arcpy with a tkinter interface, the point layer of nitrate concentration is converted to a raster using inverse
+            distance weighting, with the k value being the input value. </p>
+        <div class="col-md-12 portfolio-image figure-img img-fluid">
+                <a href="assets/IDWMap.png">
+                    <img src="assets/IDWMap.png" alt="Nitrate well point map" class="center-block img-responsive" max-width="100%" areheight="auto" />
                 </a>
             </div>
-            <div class="col-md-12 portfolio-image figure-img img-fluid">
-                <a href="assets/screen4.png">
-                    <img src="assets/screen4.png" alt="View of Ulaanbaatar" class="center-block img-responsive" max-width="100%" areheight="auto" />
+        <p>This raster is then averaged over the county shapefiles and has its value joined to the cancer rate shapefiles. This gives
+            the average concentration calculated through IDW for each cancer rate and can then undergo Linear Regression Analysis.
+        </p>
+        <div class="col-md-12 portfolio-image figure-img img-fluid">
+                <a href="assets/LinRegressMap.png">
+                    <img src="assets/LinRegressMap.png" alt="Nitrate well point map" class="center-block img-responsive" max-width="100%" areheight="auto" />
                 </a>
             </div>
-            <div class="col-md-12 portfolio-image figure-img img-fluid">
-                <a href="assets/nagy1.jpg">
-                    <img src="assets/nagy1.jpg" alt="Composition Z VIII - László Moholy-Nagy" class="center-block img-responsive" max-width="100%" areheight="auto" />
-                </a>
-            </div>
-            <div class="col-md-12 portfolio-image figure-img img-fluid">
-                <a href="assets/liss1.jpg">
-                    <img src="assets/liss1.jpg" alt="A Prounen - El Lissitzky" class="center-block img-responsive" max-width="100%" areheight="auto" />
-                </a>
-            </div>
-            <div class="col-md-12 portfolio-image figure-img img-fluid">
-                <a href="assets/kand1.webp">
-                    <img src="assets/kand1.webp" alt="Blue - Wassily Kandinsky" class="center-block img-responsive" max-width="100%" areheight="auto" />
-                </a>
-            </div>
-            <div class="col-md-12 portfolio-image figure-img img-fluid">
-                <a href="assets/chas1.jpg">
-                    <img src="assets/chas1.jpg" alt="Suprematist Composition - Illya Chashnik" class="center-block img-responsive" max-width="100%" areheight="auto" />
-                </a>
-            </div>
+        <p>The linear regression returns residuals which show where each feature deviates from the hypothesis that nitrate levels are related
+            to cancer rates.
+        </p>
         </div>
     </div>
 

@@ -3,6 +3,7 @@
 .navbar {
     background-color: #315536;
     border-radius: 0;
+    max-height : 80px;
 }
 
 /* Navbar title */
@@ -77,7 +78,9 @@
     opacity: 30%;
 }
 .img-responsive{
-    width:100%;
+    
+    
+    
 }
 
 /*** CARD ***/
@@ -128,6 +131,10 @@ a:hover {
     padding:25px 0;
 }
 
+.container-fluid{
+    padding: 5%;
+}
+
 body {
 
     font-family: 'Segoe UI', sans-serif;
@@ -160,4 +167,12 @@ h3 {
 
 #thumb{
     object-fit: fill;
+}
+
+.center-block {
+    align-items: center;
+}
+
+.small-img{
+    max-width: 50%;
 }
