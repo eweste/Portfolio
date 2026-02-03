@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+            <title></title>
+
+        <!--custom stylesheet-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/abst_style.css">
+        <!--external stylesheets-->
+        <link rel="stylesheet" href="lib/scrollmap.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+
+    <body style="background-color: #000;">
+        <nav class="navbar navbar-expand-lg navbar-default">
+        <!-- Container inside the navbar header to span the page -->
+        <div class="container-fluid">
+            <!-- Creates the navbar header -->
+            <a class="navbar-brand" href="index.html">Ethan Westerkamp</a>
+            <!-- This complex script is just for a hamburger button, which will appear on smaller screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" /></svg>
+                <span class="menu"> Menu</span>
+            </button>
+            <!-- Links to include in navbar -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Unordered list for links on navbar -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                </ul>
+            </div> <!-- end .navbar-collapse -->
+        </div> <!-- end .container-fluid -->
+    </nav> <!-- end navigation bar -->  
+        <div class="content">
+             <!--title block, background image is title image-->
+            <div class="row" style="background-image:url(assets/bg1.png); background-size:contain;">
+                <div class="center title tcBlack">
+                    <!--title text-->
+                    <h1>        Abstract Mapping                                </h1>
+                    <h3>Geo 572</h3><br>
+                    <!--subtitle or author-->
+                    <p class="author">Ethan Westerkamp</p>
+                </div>
+            </div>
+            <!--text content block-->
+            <div class="row">
+                <div class="left foreground-item">
+                    <p>On the right is Composition A XXI (1925) by Laszlo Moholy-Nagy, a Hungarian artist associated with the Bauhaus school in the 1920s. He was part of a broader movements at this time
+                         in Europe of constructivism, cubism, suprematism, and other abstract design forms characterized by assemblages of recognizable geometric forms and solid primary colors. For example,
+                         this font, Space Grotesk, derived from the Grotesk typeface which was used along with other simple sans serif fonts in various Bauhaus designs. Taking
+                         visually similar works shown in the slideshow below, the styles have been translated to a map.
+                    </p>
+                </div>
+                <div class="right background-image">
+                    <img class="fit" src="assets/nagy1.jpg">
+                </div>
+                <div class="row center-fit center-img">
+                    <div class="center-wide">
+                        <!-- Slideshow container -->
+                        <div class="slideshow-container">
+                            <!--slideshow content goes here-->
+                            <div class="slide">
+                                <img src="assets/kand1.webp">
+                                <p class="caption">Blue - Wassily Kandinsky (1922).</p>
+                            </div>
+                            <div class="slide">
+                                <img src="assets/liss1.jpg">
+                                <p class="caption">A Prounen - El Lissitzky (1925)</p>
+                            </div>
+                            <div class="slide fill">
+                                <img src="assets/nagy2.jpg">
+                                <p class="caption">Composition Z VIII - Laszlo Moholy-Nagy (1925) </p>
+                            </div>
+                            <div class="slide fill">
+                                <img src="assets/chas1.jpg">
+                                <p class="caption">Suprematist Composition - Illya Chashnik (1923)</p>
+                            </div>
+                            <!-- Next and previous buttons -->
+                            <a class="prev">&#10094;</a>
+                            <a class="next">&#10095;</a>
+    
+                            <!-- The dots/circles -->
+                            <div class="slideshow-dots">
+                                <span class="dot colorBlue" id="1"></span>
+                                <span class="dot" id="2"></span>
+                                <span class="dot" id="3"></span>
+                                <span class="dot" id="4"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--side by side text and image-->
+            <div class="row">
+                <div class = "left">
+                    <p>We can utilize some of the forms we see here as a symbology for cities, and make the roadways and transportation networks into solid lines.
+                        Keeping with minimal descriptions, only cities are labeled and borders are faint lines. 
+                    </p>
+                </div>
+                <div class = "right">
+                    <img src="assets/legend.png">
+                </div>
+            </div>
+
+            <!--background images with text scrolling over them (sidecar)-->
+            <div class="scroll-container">    
+                <!--background images-->
+                <div class="background-item">
+                    <img src="assets/screen1.png" data-slide="1" class="fill">
+                    <img src="assets/screen2.png" data-slide="2" class="fill hidden">
+                    <img src="assets/screen3.png" data-slide="3" class="fill hidden">
+                    <img src="assets/screen4.png" data-slide="4" class="fill hidden">
+                </div>
+                <!--foreground text blocks-->
+                <div class="foreground-item tcBlack">
+                    <div class="row">
+                        <div class="left background-transparent rounded">
+                            <p class="no-margin">Grayling, Michigan, a small town</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="right background-transparent rounded">
+                            <p class="no-margin">Raleigh, North Carolina, a state capital with a clear grid layout in its downtown</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Washington DC</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Ulaabaatar, Mongolia. Ultimately, regions of the world becomes difficult to distinguish.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row center">
+                <p>Next to show from various zoom levels</p>
+            </div>
+            <div class="scroll-container">    
+                <!--background images-->
+                <div class="background-item">
+                    <img src="assets/screen5.png" data-slide="1" class="fill">
+                    <img src="assets/screen6.png" data-slide="2" class="fill hidden">
+                    <img src="assets/screen7.png" data-slide="3" class="fill hidden">
+                    <img src="assets/screen8.png" data-slide="4" class="fill hidden">
+                </div>
+                <!--foreground text blocks-->
+                <div class="foreground-item tcBlack">
+                    <div class="row right">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">The world with a grid and points</p>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Showing the connecting line roadways</p>
+                        </div>
+                    </div>
+                    <div class="row left">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Large roadways and the yellow ferryways in the NYC area</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Bridges and railways in upper Mannhattan, now showing buildings</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="row">
+                <div class="center-wide">
+                    <p>Full map available below</p>
+                    <iframe height="1000" width="1200" src="https://api.mapbox.com/styles/v1/ewesterkamp/cm3dle5c1004g01pacexu5bps.html?title=view&access_token=pk.eyJ1IjoiZXdlc3RlcmthbXAiLCJhIjoiY20weTFwNHFxMGIxdjJrcTFzNzFmbmNrZSJ9.ehx3rMF28MJQy4U9fM8cSw&zoomwheel=true&fresh=true#4.92/37.78/-87.34"></iframe>
+                </div>
+            </div>
+
+            <!--credits-->
+            <div class="row no-margin">
+                <div class="center">
+                    <div class="credits">
+                        <p><b>Credits:</b></p>
+                        <p>Map created with Mapbox Studio</p>
+                        <p>Data from openstreetmap</p>
+                        <p>Artwork from wikiart.org</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--external scripts-->
+        <script type="text/javascript" src="lib/scrollmap.js"></script>
+    </body>
+</html>

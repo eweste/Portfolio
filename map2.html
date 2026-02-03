@@ -52,12 +52,13 @@
                 <h2 class="portfolio-title">Automated Raster Analysis</h2>
                 <p class="portfolio-description">
                     This project was created for the Capstone course GEO 777 at UW-Madison. This map analyzes hypothetical data of nitrogen concentration levels and cancer rates.
-                    <br>The full report can be read <a href="assets/GEO777RasterProject.pdf">here.</a>
+                    <br>The full report can be read <a href="assets/GEO777RasterProject.pdf">here.</a> Multiple analyses were performed at once in ArcPy to populated pre-structured ArcPRO layout
+                        allowing users to produce multiple maps by varying parameters.
+                    </a>
                 </p>
             </div>
         </div>
-    </div>
-    <div class="container-fluid">
+    
         <div class="row">
             <h3>Background</h3>
             <div class="col-md-12 portfolio-image figure-img img-fluid">
@@ -67,17 +68,18 @@
             </div>
             <p><br>This program was created by taking (hypothetical) randomly sampled nitrate concentrations in point layers and 
             county level data on cancer rates in Wisconsin to find if there was statistical significance between the hypothesis that 
-            higher nitrate rates in water cause increases in cancer. The program was written in Python utilizing the arcpy functions of
+            higher nitrate rates in water cause increases in cancer. The program was written in Python utilizing the ArcPy functions of
         ESRI ArcPRO. </p>
         <h3>The Program</h3>
-        <p>Using arcpy with a tkinter interface, the point layer of nitrate concentration is converted to a raster using inverse
+        <p>Using ArcPy with a tkinter interface, the point layer of nitrate concentration is converted to a raster using inverse
             distance weighting, with the k value being the input value. </p>
         <div class="col-md-12 portfolio-image figure-img img-fluid">
                 <a href="assets/IDWMap.png">
                     <img src="assets/IDWMap.png" alt="Nitrate well point map" class="center-block img-responsive" max-width="100%" areheight="auto" />
                 </a>
             </div>
-        <p>This raster is then averaged over the county shapefiles and has its value joined to the cancer rate shapefiles. This gives
+        <p>This raster is then averaged over the county shapefiles and has its value joined to the cancer rate shapefiles. This requires multiple background
+            analysis steps and has built in assurances the analyses succeed. This gives
             the average concentration calculated through IDW for each cancer rate and can then undergo Linear Regression Analysis.
         </p>
         <div class="col-md-12 portfolio-image figure-img img-fluid">

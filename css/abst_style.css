@@ -1,0 +1,25 @@
+
+
+
+body{
+    
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 30px;
+    color: #fff;
+}
+
+.tcBlack{
+    color:#000;
+}
+
+.tcWhite{
+    color:#fff;
+}
+
+iframe{
+    height:900px;
+}
+
+.colorBlue{
+    color:#89b5ec
+}

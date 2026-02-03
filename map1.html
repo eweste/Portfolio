@@ -49,25 +49,31 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
-                <h2 class="portfolio-title">State Park Vegetation Map (In Progress)</h2>
+                <h2 class="portfolio-title">State Park Vegetation Map</h2>
                 <p class="portfolio-description">
-                    This map was created for the final Practicum course of UW-Madison's GIS Development Master's program. The project involed my independent proposal and creation of a web 
-                    application of my choosing. This map was created to allow users to find information on plant species which may be present in state parks using 
-                    spatial information on natural communities.
+                    This web map application was created for the final Practicum course of UW-Madison's GIS Development Master's program  to allow users to find information on plant species which may be present in state parks using 
+                    spatial information on natural communities. The project involed my independent proposal and creation of a web 
+                    application showcasing holistic knowledge acquired throughout the program. The full report can be viewed <a href="assets/GEO778ExecutiveSummary.pdf">here.</a><br>
+                    The application was designed with two major goals in mind: interface usability for the user, the general public, and independent, modular functions to allow for 
+                    ease of data modification due to the complex and fluid nature of the source materials.
+                    <br> Databases were created in ArcPRO and hosted on ArcGIS Online, webpage functions used JavaScript and map functions used the ArcGIS Online API for JavaScript.
                 </p>
             </div>
         </div>
-    </div>
-    <div class="container-fluid">
+    
        
         <div class="row">
              
             <div class="col-md-12 portfolio-image figure-img img-fluid">
                 <h3>The Interface</h3>
                 <a href="assets/parkcover.png">
-                    <img src="assets/parkcover.png" alt="Park interface" class="center-block img-responsive" max-width="100%" areheight="auto" />
+                    <img src="assets/parkcover.png" alt="Park interface" class="center-block img-responsive" width="90%" areheight="auto" />
+                </a> <br><br><br>
+                <a href="assets/parkcover.png">
+                    <img src="assets/parkcover2.png" alt="Park interface" class="center-block img-responsive" width="90%" areheight="auto" />
                 </a>
-            <p><br>A slippy map of Michigan with boundaries of all state parks is shown to the user. Clicking on polygon will populate the side panel with a list of species</p>
+            <p><br>A slippy map of Michigan with boundaries of all state parks is shown to the user. Clicking on polygon will highlight and populate the side panel with a list of species.
+            Species are separated by their general structure (Tree, Shrub, Forb(flower) etc.)</p>
             </div>
             <div class="col-md-12 portfolio-image figure-img img-fluid">
                 
@@ -81,19 +87,24 @@
                     <img src="assets/parkspec.png" alt="Species" class="center-block img-responsive" max-width="100%" areheight="auto" />
                 
             </div>
+            <p>Searching for parks highlights and returns park lists in the same manner as the species. Opening the individual blocks allows users to search inside the specific park.</p>
+            <img src="assets/parkmap.png" alt="Species" class="center-block img-responsive" max-width="100%" areheight="auto" />
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
             <h2>How It Works</h2>
             <p>While the display and user functions are simple, there are complex functions occuring in the script. Selecting each park polygon 
-                actually selects multiple hidden polygons which intersect, these are the natural community shapefiles. These natural communities
-                and their associated species come from the <a href =https://mnfi.anr.msu.edu/ >Michigan Natural Features Inventory </a>. Each of the natural communities
-                has a many-to-many relationship with a table of species. The script loops through each selected community type and outputs the table
-                information to be placed in the side panel. This setup allows for a function to be saved in each button in the species description 
-                to backsearch for parks which intersect natural communities 
-            </p>
+                then selects the spatially associated natural community areas which are not displayed on the map. These natural communities
+                and their associated species come from the <a href =https://mnfi.anr.msu.edu/ >Michigan Natural Features Inventory </a>.</p> 
+            <div class="col-md-12 portfolio-image figure-img img-fluid">
+                
+                    <img src="assets/diag1.png" alt="Park List" class="img-responsive small-img center-block"/>
         </div>
+        <p>Each of the natural communities has many species associated with it, and a species could have multiple natural communities, and so a many-to-many relationship is created between the two features. The script selects from each selected community type and outputs the table
+                information to be placed in the side panel. This setup allows for a function  to backsearch for parks which intersect natural communities to be saved in a button in the species description. 
+               This satisfies and showcases the goal of handling the data in a modular and independent manner, easily allowing for future components to be added without major modifications being required for the pre-existing code.
+            </p>
     </div>
     <!--put your external script links here-->
     <script type="text/javascript" src="lib/jquery-3.5.1.min.js"></script>
