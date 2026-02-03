@@ -54,7 +54,7 @@
 /*** JUMBOTsRON ***/
 
 .jumbotron {
-    background-image: url("/assets/forest1.jpg");
+    background-image: url("../assets/forest1.jpg");
     background-size: contain;
     text-align: center;
     color: #b1b1b1;
